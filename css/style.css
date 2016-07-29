@@ -7,7 +7,6 @@ body{
 
 nav{
   display: flex;
-  align-self: baseline;
   justify-content: space-between;
   align-items:center;
   width: 100%;
@@ -19,12 +18,18 @@ nav{
 }
 nav img{
   width: 130px;
-
 }
 
 nav ul{
-  font-family: arial;
+  padding:0;
+  margin:0;
+  list-style:none;
+  color:white;
+  left: 0;
+  right: 0;
+  font-family: Arial;
   display: flex;
+  justify-content: center;
   flex-direction: row;
 }
 nav li{
@@ -35,7 +40,11 @@ nav li a{
   margin-right:20px;
   color:#40453f;
 }
+ul{
+  display: none;
+}
 header{
+
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #1D1742;
@@ -45,26 +54,27 @@ header{
   align-items: center;
 }
 .home {
+width: 100%;
+height: 200px;
   animation-name: changeColor;
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 .home:hover{
   animation-name: changeColor;
-  animation-duration: 5s;
-  transition: all 0.7s ease-out;
+  animation-duration: 10s;
 }
 @keyframes changeColor {
-  0%{background-color:   red;}
-  20%{background-color:  orange;}
+  0%{background-color:   black;}
+  20%{background-color:  black;}
   40%{background-color:  yellow;}
-  60%{background-color:  green}
-  80%{background-color:  blue;}
-  100%{background-color: purple;}
+  60%{background-color:  yellow;}
+  80%{background-color:  red;}
+  100%{background-color: red;}
 }
 
 header a:hover{
-  background-color: red;
+  background-color: #F55668;
   color:#1D1742;
 }
 header h1{
@@ -93,12 +103,7 @@ header .btn{
   justify-content: center;
   flex-wrap: wrap;
 }
-h1{
-  font-family: Arial;
-  color:#1D1742;
-}
 h3{
-  font-family: Arial;
   color:#F55668;
 }
 #politicien{
@@ -122,6 +127,7 @@ h3{
   transition-duration: 0.8s;
   margin: 10px;
   box-shadow: inset 0 0 0 0 rgba(245,86,104, 0.4), inset 0 0 0 12px rgba(29,23,66,0.4), 0 0px 0px rgba(0,0,0,0);}
+
   .photo .name-politicien{
     text-align: center;
     visibility: hidden;
@@ -143,13 +149,107 @@ h3{
     width:100%;
     height: 500px;
   }
-  .pk h1{
+  .pk{
     height: 100px;
     color: #F55668;
     display:flex;
-    justify-content:center;
+    flex-direction: column;
+    align-items: center;
   }
-a .btn{
-  display: flex;
-  justify-content: center;
-}
+  a .btn{
+    display: flex;
+    justify-content: center;
+  }
+  .paris{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .paris h1{
+    color:#F55668;
+  }
+  .paris h2{
+    color: #1D1742;
+  }
+  .paris p{
+    height: 100%;
+    color: #747370;
+    font-family: Arial;
+    font-weight: bold;
+  }
+  .paris a{
+    font-family: Arial;
+    border: 2px solid #F55668;
+    text-decoration: none;
+    padding: 20px;
+    color:#F55668;
+    border-radius: 50px;
+  }
+  .paris a:hover{
+    background-color: #F55668;
+    color:#1D1742;
+  }
+  .image{
+    background-color: #1D1742;
+
+  }
+  .image #polaro{
+    margin: inherit;
+    width: 100%;
+    padding-top:80px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-content:center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    order: 4;
+  }
+  footer nav{
+    margin: 0;
+    padding: 0;
+    color:black;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  .hamburger {
+    padding : 0;
+    margin : 0;
+    list-style : none;
+    line-height : 21px;
+    text-align : center;
+    display: flex;
+    position: relative;
+    display: inline-block;
+    width: 1.25em;
+    height: 0.8em;
+    margin-right: 0.3em;
+    border-top: 0.2em solid black;
+    border-bottom: 0.2em solid black;
+
+  }
+  @media screen and (min-width: 780px){
+    .hamburger{
+      display: none;
+    }
+  }
+.image{
+    animation-name: colorChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  .image :hover;{
+    animation-name: colorChange;
+    animation-duration: 10s;
+  }
+  @keyframes colorChange {
+    0%{background-color:   blue;}
+    20%{background-color:  blue;}
+    40%{background-color:  white;}
+    60%{background-color:  white;}
+    80%{background-color:  red;}
+    100%{background-color: red;}
